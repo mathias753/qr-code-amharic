@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="am">
+<head>
+  <meta charset="UTF-8">
+  <title>QR Code - ማቲያስ</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+  <style>
+    body {
+      font-family: "Noto Sans Ethiopic", sans-serif;
+      text-align: center;
+      margin-top: 100px;
+    }
+    #qrcode {
+      margin: 20px auto;
+      width: 256px;
+      height: 256px;
+    }
+  </style>
+</head>
+<body>
+  <h2>ማቲያስ QR ኮድ</h2>
+  <div id="qrcode"></div>
+
+  <script>
+    const info = `ስም : ማቲያስ
+እድሜ : 28
+ፆታ፡ ወንድ`;
+
+    new QRCode(document.getElementById("qrcode"), {
+      text: info,
+      width: 256,
+      height: 256,
+    });
+  </script>
+</body>
+</html>
